@@ -2,6 +2,7 @@
 
 A comprehensive full-stack investment simulation and portfolio management system built with Spring Boot and React.js. SimInvest provides users with real-time market data, portfolio tracking, educational resources, and a complete trading simulation experience.
 
+
 ## 🚀 Tech Stack
 
 ### Backend
@@ -162,38 +163,36 @@ SimInvest is designed for investors, students, and financial enthusiasts to prac
 ## 📸 Screenshots
 
 ### Login Page
-![Login Page](frontend/public/images/login.png)
+![Login Page](frontend/public/login.png)
 
 ### Register Page  
-![Register Page](frontend/public/images/register.png)
+![Register Page](frontend/public/register.png)
 
 ### Dashboard  
-![Dashboard](frontend/public/images/dashboard.png)
+![Dashboard](frontend/public/dashboard.png)
 
 ### Trading Page
-![Trading Page](frontend/public/images/orders.png)
-![Trading Page](frontend/public/images/transactions.png)
+![Trading Page](frontend/public/orders.png)
+![Trading Page](frontend/public/transactions.png)
 
 ### Portfolio Management
-![Portfolio Page](frontend/public/images/portfolio1.png)
-![Portfolio Page](frontend/public/images/portfolio2.png)
+![Portfolio Page](frontend/public/portfolio1.png)
 
 ### Market Page
-![Market Page](frontend/public/images/market1.png)
-![Market Page](frontend/public/images/market2.png)
-![Market Page](frontend/public/images/market3.png)
+![Market Page](frontend/public/market1.png)
+![Market Page](frontend/public/market2.png)
+![Market Page](frontend/public/market3.png)
 
 ### Market News
-![News Page](frontend/public/images/news.png)
+![News Page](frontend/public/news.png)
 
 ### Watchlist
-![Watchlist Page](frontend/public/images/watchlist-page.png)
+![Watchlist Page](frontend/public/watchlist1.png)
+![Watchlist Page](frontend/public/watchlist2.png)
 
-### User Profile
-![User Profile](frontend/public/images/profile.png)
 
 ### Educational Resources
-![Educational Content Page](frontend/public/images/edcontent.png)
+![Educational Content Page](frontend/public/resources.png)
 
 ---
 
