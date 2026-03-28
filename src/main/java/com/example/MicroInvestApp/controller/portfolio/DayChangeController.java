@@ -281,7 +281,7 @@ public class DayChangeController {
                 security.setPreviousClose(quote.getPreviousClose());
                 securityStockRepository.save(security);
 
-                // IMPORTANT: Now update all positions for this security
+                //  Now update all positions for this security
                 updatePositionsForSecurity(security);
 
                 Map<String, Object> response = createSuccessResponse("Previous close initialized successfully");
@@ -320,7 +320,7 @@ public class DayChangeController {
             position.updateCurrentValue();
 
             // Update day change using security's previous close
-            position.calculateDayChangeFromSecurity(); // You'll need to make this method public
+            position.calculateDayChangeFromSecurity(); 
 
             positionRepository.save(position);
 
