@@ -231,8 +231,7 @@ public class OrderController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size) {
 
-        // This would require implementing a search method in the service
-        // For now, returning a structured response indicating the feature
+        // return a structured response indicating the feature
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Advanced search functionality would be implemented here");
         response.put("filters", Map.of(
@@ -373,7 +372,7 @@ public class OrderController {
             response.put("valid", isValid);
             response.put("message", isValid ? "Order request is valid" : "Order request is invalid");
 
-            // Additional validation details could be added here
+            
             Map<String, Object> validationDetails = new HashMap<>();
             validationDetails.put("portfolioId", orderRequest.getPortfolioId() != null);
             validationDetails.put("stockSymbol", orderRequest.getStockSymbol() != null && !orderRequest.getStockSymbol().trim().isEmpty());
@@ -474,7 +473,7 @@ public class OrderController {
     public ResponseEntity<Map<String, Object>> getSystemOrderStats() {
         logger.debug("Admin retrieving system order statistics");
 
-        // This would require implementing system-wide statistics in the service
+        
         Map<String, Object> stats = new HashMap<>();
         stats.put("message", "System-wide order statistics would be implemented here");
         stats.put("timestamp", LocalDateTime.now());
