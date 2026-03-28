@@ -26,7 +26,7 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/api/market-data") 
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})  // ADDED: CORS support
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})  //CORS support
 public class MarketDataController {
 
     private static final Logger logger = LoggerFactory.getLogger(MarketDataController.class);
