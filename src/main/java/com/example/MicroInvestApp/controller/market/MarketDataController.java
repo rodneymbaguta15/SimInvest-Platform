@@ -23,10 +23,9 @@ import java.util.Optional;
 
 /**
  * REST Controller for Market Data Operations and Monitoring
- * Fixed version with proper error handling and endpoint mapping
  */
 @RestController
-@RequestMapping("/api/market-data")  // FIXED: Changed from "/api/v1/market-data" to match frontend calls
+@RequestMapping("/api/market-data") 
 @CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173"})  // ADDED: CORS support
 public class MarketDataController {
 
@@ -53,14 +52,14 @@ public class MarketDataController {
     // Manual operations endpoints
 
     /**
-     * FIXED: Manually trigger price update for a specific symbol
+      Manually trigger price update for a specific symbol
      */
     @PostMapping("/update-price/{symbol}")
     public ResponseEntity<?> updatePrice(@PathVariable String symbol) {
         try {
             logger.info("Manual price update requested for symbol: {}", symbol);
 
-            // FIXED: Add validation
+            //Add validation
             if (symbol == null || symbol.trim().isEmpty()) {
                 return ResponseEntity.badRequest().body(Map.of(
                         "error", "Invalid symbol",
@@ -86,7 +85,7 @@ public class MarketDataController {
     }
 
     /**
-     * FIXED: Manually trigger market data fetch for a specific symbol
+     * Manually trigger market data fetch for a specific symbol
      */
     @PostMapping("/fetch-data/{symbol}")
     public ResponseEntity<?> fetchMarketData(@PathVariable String symbol) {
@@ -119,7 +118,7 @@ public class MarketDataController {
     }
 
     /**
-     * FIXED: Manually trigger historical data fetch for a symbol
+     * Manually trigger historical data fetch for a symbol
      */
     @PostMapping("/fetch-historical/{symbol}")
     public ResponseEntity<?> fetchHistoricalData(
@@ -156,7 +155,7 @@ public class MarketDataController {
     }
 
     /**
-     * FIXED: Bulk update prices for multiple symbols
+     * Bulk update prices for multiple symbols
      */
     @PostMapping("/bulk-update")
     public ResponseEntity<?> bulkUpdatePrices(@RequestBody List<String> symbols) {
@@ -228,7 +227,7 @@ public class MarketDataController {
     }
 
     /**
-     * FIXED: Get system statistics and metrics
+     * Get system statistics and metrics
      */
     @GetMapping("/stats")
     public ResponseEntity<?> getSystemStats() {
@@ -254,7 +253,7 @@ public class MarketDataController {
     }
 
     /**
-     * FIXED: Get market status (open/closed)
+     * Get market status (open/closed)
      */
     @GetMapping("/market-status")
     public ResponseEntity<?> getMarketStatus() {
@@ -288,7 +287,7 @@ public class MarketDataController {
     // Data retrieval endpoints
 
     /**
-     * FIXED: Get market data for a specific symbol and date
+     * Get market data for a specific symbol and date
      */
     @GetMapping("/{symbol}")
     public ResponseEntity<?> getMarketData(
@@ -330,7 +329,7 @@ public class MarketDataController {
     }
 
     /**
-     * FIXED: Get historical prices for a symbol within date range
+     * Get historical prices for a symbol within date range
      */
     @GetMapping("/{symbol}/history")
     public ResponseEntity<?> getHistoricalPrices(
@@ -380,7 +379,7 @@ public class MarketDataController {
     // Simple status endpoints
 
     /**
-     * FIXED: Simple health check endpoint
+     * Simple health check endpoint
      */
     @GetMapping("/status")
     public ResponseEntity<?> getStatus() {
