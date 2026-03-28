@@ -184,7 +184,7 @@ public class TransactionController {
         return ResponseEntity.ok(costBasisInfo);
     }
 
-    // Admin: Get unsettled transactions
+    // Admin only ednpoint: Get unsettled transactions
     @GetMapping("/admin/unsettled")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<TransactionResponseDTO>> getUnsettledTransactions() {
@@ -192,7 +192,7 @@ public class TransactionController {
         return ResponseEntity.ok(transactions);
     }
 
-    // Admin: Process unsettled transactions
+    // Admin only endpoint: Process unsettled transactions
     @PostMapping("/admin/process-unsettled")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Map<String, String>> processUnsettledTransactions() {
@@ -203,7 +203,7 @@ public class TransactionController {
         return ResponseEntity.ok(response);
     }
 
-    // Add this endpoint to test
+    // Test endpoint for settlements
     @GetMapping("/api/v1/transactions/admin/scheduled-count")
     public ResponseEntity<Map<String, Object>> getScheduledSettlements() {
         Map<String, Object> response = new HashMap<>();
