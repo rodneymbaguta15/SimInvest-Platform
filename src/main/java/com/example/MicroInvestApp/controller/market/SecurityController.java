@@ -1,4 +1,4 @@
-// Enhanced SecurityController.java - Full support for market page functionality
+// SecurityController.java - Full support for market page functionality
 package com.example.MicroInvestApp.controller.market;
 
 import com.example.MicroInvestApp.domain.enums.Exchange;
